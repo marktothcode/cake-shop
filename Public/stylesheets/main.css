@@ -56,6 +56,13 @@ h2 {
 
 .h3, h3 {
     font-size: 21px;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+}
+
+.h1, h1 {
+    
+    margin-bottom: 1.5rem;
 }
 
 .col-md-12 {
@@ -70,10 +77,15 @@ h2 {
 }
 
 .container.white-background p.title {
- 
+    font-size: 22px;
     display: inline-block;
     margin-bottom: 0;
+
  
+}
+
+p.title {
+    font-size: 22px;
 }
 
 .col-md-6.centered {
@@ -85,8 +97,20 @@ h2 {
     margin: 0 auto;
 }
 
+.about-grey-background {
+    background-image: url("/about-us-carousel.jpg");
+    background-repeat: no-repeat;    
+    background-position: center; 
+    min-height: 578px;
+}
+
+.container-fluid.about-grey-background {
+    padding: 63px 0px 110px 0px;
+    margin-top: 25px;
+}
+
 .grey-background {
-    background-image: url("/Light-Grey-Background-Hd-5-1.jpg");
+    background-image: url("/grey-background-website-8013.jpg");
     background-repeat: no-repeat;    
     background-position: center; 
 }
@@ -98,7 +122,8 @@ h2 {
 }
 
 .container-fluid.grey-background {
-    padding: 50px 0px 75px 0px;
+    padding: 63px 0px 110px 0px;
+    margin-top: 25px;
 }
 
 .speech-bubble {
@@ -154,10 +179,6 @@ h2 {
     content: '';
 }
 
-.thumbnail {
-    position: relative;
-    margin-bottom: 25px;
-}
 
 .footer {
     margin-top: 50px;
@@ -253,7 +274,7 @@ button.btn.btn-success {
 .circle {
 	color: white;
     padding: 12px;
-    font-size: 30;
+    font-size: 30px;
     border-radius: 50%;
     width: 72px;
     height: 72px;
@@ -269,6 +290,7 @@ button.btn.btn-success {
 .mission-statement-blurb {
     text-align: center;
     margin: 15px auto;
+    font-weight: lighter;
 }
 
 
@@ -284,11 +306,127 @@ button.btn.btn-success {
 }
 
 h1.text-center {
-    padding: 1.5rem;
+    padding-top: 2.5rem;
+}
+
+h1.text-center-testimonials {
+    padding-top: 0;
+    text-align: center;
+    padding-bottom: 2.5rem;
+    
+
 }
 
 .about-testimonial-name {    
         display: inline-block;
         margin-left: 20px;
         margin-top: 1.6rem;    
+};
+
+
+.col-lg-6.col-md-6.col-sm-6.thumbnail {
+    background-color: red;
+    height: 250px;
+    max-width: 100%;   
 }
+
+.thumbnail {
+    position: relative;  
+    overflow: hidden;   
+    margin-bottom: 25px;
+}
+
+figure {   
+    margin: 0 29px 0 0;
+    float: left
+};
+
+figure img {
+    width: 100%;
+}
+
+.pushed-down {
+    padding: 24px 0 0 0;
+    overflow: hidden;
+    color: white;
+    font-size: 24px;
+}
+
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Add a background color and some padding around the form */
+
+.contact-map {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.has-scroll-reveal { opacity: 0; animation-play-state: paused; }
+
+.animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+    animation-play-state: running;
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.accent-background1 {
+    background-color: #6E2A2C;
+}
+
+.accent-background2 {
+    background-color: #B26660;
+}
+
+.accent-background3 {
+    background-color: #B7999A;
+}
+
+p.title.accent-color1 {
+    color: #6E2A2C;
+    
+}
+
+p.title.accent-color2 {
+    color: #B26660;
+}
+
+p.title.accent-color3 {
+    color: #B7999A;
+}
+
+
+

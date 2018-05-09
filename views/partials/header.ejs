@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,12 +11,90 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+
+
     
 
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="/../stylesheets/main.css" type="text/css">
+
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+         crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+         crossorigin="anonymous"></script>
+
 </head>
+
+<script>
+jQuery(document).ready( function($) {
+    var revealClass = '.animated';
+    var targetClass = '.has-scroll-reveal:not(' + revealClass + ')';
+    var offset = 50; // Offset from bottom of viewport in pixels.
+
+    var winHeight = $(window).height();
+
+    // Recalc height of window in case of resize
+    $(window).bind('resizeEnd', function() {
+      winHeight = $(window).height();
+    });
+
+    // Fire when page loads
+    triggerAnimation(revealClass, targetClass, offset, winHeight);
+
+    // Also fire on scroll
+    $(window).on('scroll', function() {
+        triggerAnimation(revealClass, targetClass, offset, winHeight);
+    }); // window.on('scroll')
+
+}); // document.ready
+
+function triggerAnimation(revealClass, targetClass, offset, winHeight) {
+
+      // Get current scrollPos
+      var trigger = $(window).scrollTop() + winHeight - offset;
+
+      // Loop through elements we're affecting
+      $(targetClass).each(function() {
+        var elementOffset = $(this).offset().top;
+
+        if( elementOffset < trigger ) {
+
+          $(this).addClass( revealClass.replace('.','') );
+        }
+      });
+
+}
+
+/*
+ * ResizeEnd
+ *
+ * Example:
+ * $(window).bind('resizeEnd', function() {
+ *  console.log('resize ended 500ms ago');
+ * });
+ */
+$(window).resize(function() {
+
+    if(this.resizeTO) clearTimeout(this.resizeTO);
+
+    this.resizeTO = setTimeout(function() {
+        $(this).trigger('resizeEnd');
+    }, 500);
+
+});
+
+</script>
+
+
 
   <body>
 
@@ -34,14 +113,18 @@
             <a class="nav-link" href="/about-us">About us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="/services">Services</a>
           </li> 
           <li class="nav-item">
-            <a class="nav-link" href="#">Offers</a>
+            <a class="nav-link" href="/offers">Offers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="/contact-us">Contact Us</a>
           </li>                 
         </ul>      
       </div>
     </nav>
+
+    
+
+

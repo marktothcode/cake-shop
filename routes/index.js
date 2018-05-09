@@ -46,7 +46,20 @@ router.get("/", function(res, res) {
 
 router.get("/about-us", function(req, res) {
     res.render('about-us');
-} )
+});
+
+router.get("/services", function(req, res) {
+    res.render('services');
+});
+
+router.get("/offers", function(req, res) {
+    res.render('offers');
+});
+
+router.get("/contact-us", function(req, res) {
+    res.render('contact-us');
+});
+
 
 /* // PROJECT - CREATE ROUTE
 
