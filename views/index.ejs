@@ -3,26 +3,34 @@
 <% include partials/header.ejs %>
 
 
+
+
     <main role="main" class="container-fluid">
+    
+    
 
      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+   
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item item active">
+      <div class="banner-curve"><img class="image-responsive" src="/overlay.png"></div>   
       <img class="d-block img-fluid" src="/birthday-cake-380178_1920.jpg" alt="First slide">
     </div>
     <div class="carousel-item item">
+    <div class="banner-curve"><img class="image-responsive" src="/overlay.png"></div> 
       <img class="d-block img-fluid" src="/cupcakes-690040_1920.jpg" alt="Second slide">
     </div>
     <div class="carousel-item item">
+    <div class="banner-curve"><img class="image-responsive" src="/overlay.png"></div> 
       <img class="d-block img-fluid" src="/pancakes-2020863_1920.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span aria-hidden="true"><img src="chevron-left.png"></span>
+    <span aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span aria-hidden="true"><img src="chevron-right.png"></span>
+    <span aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
@@ -31,30 +39,29 @@
   <div class="row welcome container">
       <div class="col-xs-9 col-md-7 welcome-cake"></div>
       <div class="col-xs-3 col-md-5 centered">
-        <h2>WELCOME!</h2>
-        <h3>Cum sociistoque pentibus et magnis diarturto ascetur rimulug
-        Nummy nrerit uris.</h3>
-        <p>Pha sellrtsce scipitvarius mi. Cum sociistoque 
-        pentibus et magnis diarturt scetur rimulug maleada odior bi dio 
-        gravida atcurus necuus a loremcenas tri! stique ori ac sem. Duis 
-        ultrices pharetra gna. Donec accumsaalda ornec sit amet eros. 
-        Lorem ipm do amt consc tetu er aiing elit.
-        </p>
+      <% Home.forEach(function(Home) { %>
+
+        <h2><%=Home.topTitle%></h2>
+        <h3><%=Home.topSmallTitle%></h3>
+        <p><%=Home.topDescription%></p>        
+        
+        <% }); %>   
+         
         <button type="button" class="btn btn-success">Read more</button>
       </div>
   </div>
 
     <div class="row welcome container">      
       <div class="col-xs-9 col-md-7 centered">
-        <h2>ABOUT US</h2>
-       <h3>Cum sociistoque pentibus et magnis diarturto ascetur rimulug
-        Nummy nrerit uris.</h3>
-        <p>Pha sellrtsce scipitvarius mi. Cum sociistoque 
-        pentibus et magnis diarturt scetur rimulug maleada odior bi dio 
-        gravida atcurus necuus a loremcenas tri! stique ori ac sem. Duis 
-        ultrices pharetra gna. Donec accumsaalda ornec sit amet eros. 
-        Lorem ipm do amt consc tetu er aiing elit.
-        </p>
+
+       <% Home.forEach(function(Home) { %>
+
+        <h2><%=Home.bottomTitle%></h2>
+        <h3><%=Home.bottomSmallTitle%></h3>
+        <p><%=Home.bottomDescription%></p>        
+        
+        <% }); %>
+               
         <button type="button" class="btn btn-success">Read more</button>
       </div>
       <div class="col-xs-3 col-md-5 about-cake">
@@ -64,8 +71,8 @@
   <div class="container-fluid grey-background">
   <div class="row container welcome">
     <div class="col-md-12">
-    <h1 class="has-scroll-reveal animation fadeInUp">EXQUISITE WEDDING CAKES FROM CAKE ARTISTS</h1>
-    <h3 class="has-scroll-reveal animation fadeInUp">Sociistoque pentibus et magnis diarturto ascetur rimulug aleada</h3>
+    <h1 class="has-scroll-reveal animation fadeInUp">Confectionary services including</h1>
+    <h3 class="has-scroll-reveal animation fadeInUp">I love toffee lemon drops marshmallow gummi bears...</h3>
     </div>
    
   </div>
@@ -81,13 +88,14 @@
             <img class="cake-service" src="/page1_icon1.png">
          </div>
          <div class="col-md-6 centered">
-           <p class="title accent-color1">NUMMY NRERIT URIS PHA SELL</p>
+           <p class="title accent-color1">Birthday Cakes</p>
         </div>
       </div>
       <hr>       
-      <h3>Sociistoque pentibus et magnis diar turto ascetur rimulug aleada</h3>
-      <p>Nummy nrerit uris. Pha sellrtsce scipit varius mi. Cum sociistoque pentibus et magnis diarturt scetur rimulug maleada.</p>
-      <button type="button" class="btn btn-success">Read more</button>
+      <h3>Jelly-o cupcake lemon drops tootsie</h3>
+      <p>Cupcake ipsum dolor sit. Amet chupa chups powder biscuit. I love pie pastry I love. I love toffee lemon drops marshmallow gummi bears topping bonbon muffin powder.</p>
+      <a href="/services" class="btn btn-success">More information</a>
+    
       </div>
     </div>
      </div>
@@ -101,14 +109,14 @@
         <img class="cake-service" src="/page1_icon2.png">  
       </div>
       <div class="col-md-6 centered"> 
-        <p class="title accent-color2">NUMMY NRERIT URIS PHA SELL</p>
+        <p class="title accent-color2">Muffins</p>
         </div>
       </div>
       <hr>
       
-      <h3>Sociistoque pentibus et magnis diar turto ascetur rimulug aleada</h3>
-      <p>Nummy nrerit uris. Pha sellrtsce scipit varius mi. Cum sociistoque pentibus et magnis diarturt scetur rimulug maleada.</p>
-      <button type="button" class="btn btn-success">Read more</button>
+      <h3>Powder chocolate bar sesame snaps cookie apple pie bear claw cake fruitcake danish.</h3>
+      <p>Halvah tiramisu powder soufflé pie candy canes biscuit. Cheesecake ice cream jujubes chocolate bar lemon drops jujubes oat cake.</p>
+      <a href="/services" class="btn btn-success">More information</a>
     </div>
   </div>
   </div>
@@ -121,14 +129,14 @@
     <img class="cake-service" src="/page1_icon3.png">  
     </div>
      <div class="col-md-6 centered"> 
-    <p class="title accent-color3">NUMMY NRERIT URIS PHA SELL</p>
+    <p class="title accent-color3">Donuts</p>
     </div>
     </div>
     <hr>
    
-    <h3>Sociistoque pentibus et magnis diar turto ascetur rimulug aleada</h3>
+    <h3>Some text will go here, definitely.</h3>
     <p>Nummy nrerit uris. Pha sellrtsce scipit varius mi. Cum sociistoque pentibus et magnis diarturt scetur rimulug maleada.</p>
-    <button type="button" class="btn btn-success">Read more</button>
+    <a href="/services" class="btn btn-success">More information</a>
     </div>
   
   </div>
@@ -140,54 +148,51 @@
 
   <div class="row container welcome">
     <div class="col-md-12">
-    <h1 class="has-scroll-reveal animation fadeInUp">WE PRIDE OURSELVES IN HAVING MANY VERY HAPPY CLIENTS!</h1>    
+    <h1 class="has-scroll-reveal animation fadeInUp">Delicious cakes equals many happy customers. :)</h1>    
     </div>
   </div>
   
 
   <div class="row container col-centered">
     
-    <div class="col-xs-12 col-md-4 has-scroll-reveal animation fadeInUp">
+    <div class="col-xs-12 col-md-12 col-lg-4 has-scroll-reveal animation fadeInUp">
       <div class="container white-background">
       <div class="thumbnail">
-       <img class="testimonial-picture" src="/page1_pic3.jpg">
-       <div class="testimonial-name"><p>REKA K.</p></div> 
-       </div>       
-       <div class="speech-bubble">Nummy nrerit uris. Pha sellrtsce scipit varius mi. Cum sociistoque pentibus et magnis diarturt scetur rimulug maleada.</div>
+       <img class="testimonial-picture" src="rekakosi.jpg">
+       <div class="testimonial-name">Reka K.</div> 
+       </div>     
+       <div class="triangle"></div>  
+       <div class="speech-bubble font-italic">"5* service, delicious cakes, cheap prices."</div>
       
       </div>
     </div>
   
    
-  <div class="col-xs-12 col-md-4 has-scroll-reveal animation fadeInUp">
+  <div class="col-xs-12 col-md-12 col-lg-4 has-scroll-reveal animation fadeInUp">
    <div class="container white-background">
    <div class="thumbnail">
-      <img class="testimonial-picture" src="/page1_pic4.jpg">  
-      <div class="testimonial-name">KORODI D.</div>  
+      <img class="testimonial-picture" src="/korodidori.jpg">  
+      <div class="testimonial-name">Dora K.</div>  
       </div>        
       <div class="triangle"></div>
-      <div class="speech-bubble">Nummy nrerit uris. Pha sellrtsce scipit varius mi. Cum sociistoque pentibus et magnis diarturt scetur rimulug maleada.</div>
+      <div class="speech-bubble font-italic">"Hands down the best cakes in Manchester."</div>
       
     </div>
   </div>
   
-  <div class="col-xs-12 col-md-4 has-scroll-reveal animation fadeInUp">
+  <div class="col-xs-12 col-md-12 col-lg-4 has-scroll-reveal animation fadeInUp">
     <div class="container white-background">
      <div class="thumbnail">
-      <img class="testimonial-picture" src="/page1_pic5.jpg">  
-      <div class="testimonial-name">MARK T.</div>    
+      <img class="testimonial-picture" src="/marktoth.jpg">  
+      <div class="testimonial-name">Mark T.</div>    
       </div>
       <div class="triangle"></div>
-      <div class="speech-bubble">Nummy nrerit uris. Pha sellrtsce scipit varius mi. Cum sociistoque pentibus et magnis diarturt scetur rimulug maleada.</div>
+      <div class="speech-bubble font-italic">"Kate's made a cake for my last birthday, it was delicious."</div>
     </div>
   </div>
 
 </div>
 
-</div>
-
-<div class="iframe-container"> 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.7472988565764!2d-2.2426411841567617!3d53.47297618000576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1eb7a86428d%3A0x756df9742a7d6b16!2sCheeky+Coffee+Co!5e0!3m2!1shu!2suk!4v1522732909435" width="350" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 
 <% include partials/footer.ejs %>

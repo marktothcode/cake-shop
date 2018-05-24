@@ -1,0 +1,45 @@
+<% include ../../partials/admin-header.ejs %>
+
+<div class="container">
+    <div class="row">
+<h1 style="text-align: center;"><%=Home.topTitle%></h1>
+        <div class="form-centering">
+
+        <form action="/<%=Home._id%>/?_method=PUT" method="POST">
+
+            <div class="form-group">
+            <input class="form-control" type="text" name="Home[topTitle]" value="<%=Home.topTitle%>">
+            </div>
+
+            <div class="form-group">
+            <input class="form-control" type="text" name="Home[topSmallTitle]" value="<%=Home.topSmallTitle%>">
+            </div>
+
+            <div class="form-group">
+            <input class="form-control" type="text" name="Home[topDescription]" value="<%=Home.topDescription%>">
+            </div>
+
+             <div class="form-group">
+            <input class="form-control" type="text" name="Home[bottomTitle]" value="<%=Home.bottomTitle%>">
+            </div>
+
+            <div class="form-group">
+            <input class="form-control" type="text" name="Home[bottomSmallTitle]" value="<%=Home.bottomSmallTitle%>">
+            </div>
+
+            <div class="form-group">
+            <input class="form-control" type="text" name="Home[bottomDescription]" value="<%=Home.bottomDescription%>">
+            </div>
+
+
+            <div class="form-group">
+            <button class="button-action" style="width: 100%">Submit!</button>
+            </div>
+         
+       </form>
+    <a href="/pillows">Back to the Homepage</a> 
+       
+    
+        </div>
+    </div>
+</div>

@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var methodOverride = require("method-override");
+var Home = require("./models/home-text");
 //var Project = require("./models/project");
 //var fileUpload = require("express-fileupload");
 //var fs = require("fs");
@@ -12,7 +13,9 @@ var methodOverride = require("method-override");
 // REQUIRING PORTFOLIO ROUTES
 
 var indexRoutes = require("./routes/index");
-// 	projectRoutes = require("./routes/project");
+var adminRoutes = require("./routes/admin");
+var homeTextController = require("./routes/home-text-controller");
+var homeServiceController = require("./routes/home-service-controller")
 
 // Set Storage Engine
 
@@ -41,6 +44,10 @@ app.use(methodOverride("_method"));
 //app.use(fileUpload());
 
 app.use(indexRoutes);
+app.use("/admin", adminRoutes);
+app.use(homeTextController);
+app.use(homeServiceController);
+
 //app.use("/project-list", projectRoutes)
 
 

@@ -5,7 +5,7 @@ body {
 
 .logo {
     width: 207px;
-    height: 85px;
+    height: 110px;
 }
 
 nav.container.navbar.navbar-expand-md.navbar-light.bg-default {
@@ -98,9 +98,9 @@ p.title {
 }
 
 .about-grey-background {
-    background-image: url("/about-us-carousel.jpg");
-    background-repeat: no-repeat;    
-    background-position: center; 
+    background-image: url(/about-us-carousel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 578px;
 }
 
@@ -119,6 +119,7 @@ p.title {
     padding-top: 25px;
     padding-bottom: 25px;
     background-color: white;
+    text-align: left;
 }
 
 .container-fluid.grey-background {
@@ -143,15 +144,15 @@ p.title {
 }
 
 .inverted-speech-bubble:after {
-    position: absolute;
-    top: 219px;
+    position: absolute;  
     left: 26px;
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
-    border-right: 20px solid transparent;   
+    border-right: 20px solid transparent;
     border-top: 20px solid white;
     content: '';
+    bottom: -20px;
 }
 
 .testimonials {
@@ -181,9 +182,24 @@ p.title {
 
 
 .footer {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 50px;   
     text-align: center;
+    background-color: #ac3b61;
+    color:white;
+    
+}
+
+.footer a {
+    font-size: 12px;
+    color: white;
+
+}
+
+.footer a:visited {
+    color: white;
+
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
@@ -196,7 +212,7 @@ p.title {
     display: block;
 }
 
-button.btn.btn-success {
+a.btn.btn-success {
     display: block;
     margin: auto;
 }
@@ -427,6 +443,23 @@ p.title.accent-color2 {
 p.title.accent-color3 {
     color: #B7999A;
 }
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: white;
+    background-color: #ac3b61; 
+}
+
+.banner-curve {
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: -7px;
+    z-index: 55;
+}
+
+
 
 
 

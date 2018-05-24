@@ -1,0 +1,19 @@
+.bg-orange {
+    background-color: #FBAC4F;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+
+body {
+      background: #f4f4f4;
+  }
+
+
+
+nav.navbar.navbar-expand-lg.navbar-dark.bg-light a.nav-link{
+    color: #FBAC4F;
+}
+
+
