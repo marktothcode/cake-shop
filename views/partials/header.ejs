@@ -97,8 +97,7 @@ $(window).resize(function() {
 
 
   <body>
-
-    <nav class="container navbar navbar-expand-md navbar-light bg-default">
+ <nav class="container navbar navbar-expand-md navbar-light bg-default">
       <a class="navbar-brand" href="/"><img class="logo" src="/logo.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -106,19 +105,19 @@ $(window).resize(function() {
 
       <div class="collapse navbar-collapse mr-auto" id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item <% if (path == "/") { %> active <% } %>">
             <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item <% if (path == "/about-us") { %> active <% } %>">
             <a class="nav-link" href="/about-us">About us</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item <% if (path == "/services") { %> active <% } %>">
             <a class="nav-link" href="/services">Services</a>
           </li> 
-          <li class="nav-item">
+          <li class="nav-item <% if (path == "/offers") { %> active <% } %>">
             <a class="nav-link" href="/offers">Offers/Price List</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item <% if (path == "/contact-us") { %> active <% } %>">
             <a class="nav-link" href="/contact-us">Contact Us</a>
           </li>                 
         </ul>      
