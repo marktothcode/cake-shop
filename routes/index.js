@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var Home = require("../models/home-text");
-var path;
+
 
 router.get("/", function(req, res) {
 
@@ -10,27 +10,27 @@ router.get("/", function(req, res) {
             console.log(err);
         }
         else {
-            res.render("index", { Home: homeText, path:req.path });           
+            res.render("index", { Home: homeText });           
            
         }
     });
 });
 
 router.get("/about-us", function(req, res) {
-    res.render('about-us', {path : req.path});
+    res.render('about-us');
     
 });
 
 router.get("/services", function(req, res) {
-    res.render('services', {path : req.path});
+    res.render('services');
 });
 
 router.get("/offers", function(req, res) {
-    res.render('offers', {path : req.path});
+    res.render('offers');
 });
 
 router.get("/contact-us", function(req, res) {
-    res.render('contact-us', {path : req.path} );
+    res.render('contact-us');
 });
 
 module.exports = router;
